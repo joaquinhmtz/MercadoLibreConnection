@@ -84,11 +84,11 @@ app.use('*', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+// app.listen(PORT, () => {
   
-});
+// });
 
-http.listen(port, () => { 
+http.listen(PORT, () => { 
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Frontend URL: ${process.env.FRONTEND_URL}`);
