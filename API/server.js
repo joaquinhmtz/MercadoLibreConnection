@@ -9,6 +9,7 @@ const userRoutes = require('./routes/user');
 const webhookRoutes = require('./routes/webhook');
 
 const app = express();
+const http = require("http").createServer(app);
 const PORT = process.env.PORT || 4000;
 
 // Connect to MongoDB
@@ -84,6 +85,10 @@ app.use('*', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
+  
+});
+
+http.listen(port, () => { 
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Frontend URL: ${process.env.FRONTEND_URL}`);
