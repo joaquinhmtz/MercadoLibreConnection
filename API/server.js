@@ -59,7 +59,7 @@ app.use('/', userRoutes);
 app.use('/webhook', webhookRoutes);
 
 app.get("/", (req, res) => {
-  res.send("¡Hola, soy el app de Mercado Libre!");
+  res.send("¡Hola, soy el app de Mercado LIBRE!");
 });
 
 // Error handling middleware
