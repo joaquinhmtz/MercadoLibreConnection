@@ -58,6 +58,10 @@ app.use('/auth', authRoutes);
 app.use('/', userRoutes);
 app.use('/webhook', webhookRoutes);
 
+app.get("/", (req, res) => {
+  res.send("¡Hola, soy el app de Mercado Libre!");
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);
